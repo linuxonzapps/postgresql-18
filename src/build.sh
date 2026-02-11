@@ -7,6 +7,6 @@ trap 0 1 2 ERR
 apt-get update && apt-get install sudo -y
 current_dir="$PWD"
 bash /tmp/linux-on-ibm-z-scripts/PostgreSQL/${version}/build_postgresql.sh -y
-cd $PWD/postgresql-${version}/tmp_install/ && tar cvfz postgresql-${version}-linux-s390x.tar.gz initdb-template usr
+cd /usr/local/pgsql/ && tar cvfz postgresql-${version}-linux-s390x.tar.gz *
 mv postgresql-${version}-linux-s390x.tar.gz ${current_dir}
 exit 0
