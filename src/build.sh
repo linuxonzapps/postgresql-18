@@ -4,6 +4,7 @@ read -ra arr <<< "$@"
 version=${arr[1]}
 trap 0 1 2 ERR
 # Ensure sudo is installed
+apt-get update && apt-get install sudo -y
 current_dir="$PWD"
 bash /tmp/linux-on-ibm-z-scripts/PostgreSQL/${version}/build_postgresql.sh -y
 cd $PWD/postgresql-${version}/tmp_install/ && tar cvfz postgresql-${version}-linux-s390x.tar.gz initdb-template usr
