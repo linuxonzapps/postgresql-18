@@ -8,5 +8,5 @@ apt-get update && apt-get install sudo -y
 current_dir="$PWD"
 bash /tmp/linux-on-ibm-z-scripts/PostgreSQL/${version}/build_postgresql.sh -y
 cd /usr/local/pgsql/ && tar cvfz postgresql-${version}-linux-s390x.tar.gz *
-mv postgresql-${version}-linux-s390x.tar.gz ${current_dir}
+mv postgresql-18-${version}-linux-s390x.tar.gz ${current_dir}
 exit 0
