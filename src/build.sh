@@ -10,7 +10,7 @@ if [ -f /etc/os-release ]; then
     . /etc/os-release
     DISTRO="$ID-$VERSION_ID"
     if [ "$VERSION_CODENAME" != "" ]; then
-        DISTRO="$DISTRO-$VERSION_CODENAME"
+        DISTRO="$ID-$VERSION_CODENAME"
     fi
 fi
 current_dir="$PWD"
