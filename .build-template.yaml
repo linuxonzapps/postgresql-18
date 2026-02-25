@@ -2,7 +2,7 @@ template: templates/loz-script-project.yaml
 overrides:
   artifacts:
     - type: script
-      version: 18.1
+      version: 17.7
       build_script:
         repo_name: linux-on-ibm-z-scripts
         path: src/build.sh
